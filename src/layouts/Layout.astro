@@ -23,7 +23,7 @@ const { title } = Astro.props;
 
 	
 		<AdRow></AdRow>
-		<Header client:only="preact"></Header>
+		<Header client:load></Header>
 
 		<slot />
 
