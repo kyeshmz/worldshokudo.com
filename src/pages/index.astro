@@ -1,22 +1,30 @@
 ---
-import Baby from '../components/gifs/Baby.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="World Shokudo">
-	<main>
-		<img src="/gifs/space.gif">
 
-		<h1>World Shokudo</h1>
-		<Baby></Baby>	
+	<main>
+		<div class="flex flex-col justify-center items-center">
+			<h1 class="rainbow-text text-5xl font-bold">World Shokudo FOREVER</h1>
+		<img src="/gifs/space.gif">
+		</div>
+	
 	</main>
-	<img src="/gifs/ads/dostan2.gif">
+
+
 	
 
 
 </Layout>
 
 <style>
+
+.rainbow-text {
+  background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 	:root {
 		--astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
 	}

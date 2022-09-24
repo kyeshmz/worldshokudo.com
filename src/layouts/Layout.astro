@@ -1,7 +1,7 @@
 ---
 import AdRow from '../components/gifs/AdRow.astro';
 import GlobeRow from '../components/gifs/GlobeRow.astro';
-import Header from '../components/Header.astro';
+import Header from '../components/layouts/Header';
 
 export interface Props {
 	title: string;
@@ -20,13 +20,14 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<AdRow></AdRow>
-		<GlobeRow></GlobeRow>
 
-		<Header></Header>
+	
+		<AdRow></AdRow>
+		<Header client:only="preact"></Header>
 
 		<slot />
-		<AdRow></AdRow>
+
+		<GlobeRow></GlobeRow>
 	</body>
 </html>
 <style is:global>
@@ -41,7 +42,8 @@ const { title } = Astro.props;
 		--color-border: hsl(17, 24%, 90%);
 	}
 	body{
-		background-image: url('/images/background.jpg');
+		background-image: url('/images/abehiroshi.jpg');
+		background-size: 150px;
 		overflow-x: hidden;
 	}
 

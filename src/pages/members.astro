@@ -1,8 +1,17 @@
 ---
+import MemberCard from '../components/Members/MemberCard';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="World Shokudo">
-	
+
+        <div class="grid grid-cols-4 gap-4 mx-auto max-w-screen-xl">
+          <MemberCard client:only="preact" name="かいくん" season="Season: 1,2"></MemberCard>
+          <MemberCard client:only="preact" name="ゆりえ姉さん" season="Season: 1,2"></MemberCard> 
+          <MemberCard client:only="preact" name="JAMBO" season="Season: 1,2"></MemberCard> 
+          <MemberCard name="ASAYO" season="Season: 1,2"></MemberCard>  
+
+    </div>
+
 
 </Layout>
